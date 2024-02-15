@@ -1,0 +1,31 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "" # enter here client_id
+name = "tpss-sample-app"
+handle = "tpss-sample-app"
+application_url = "https://YOUR_DOMAIN.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "YOUR_DOMAIN.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products, read_products, write_orders, read_orders, read_customers"
+
+[auth]
+redirect_urls = [
+  "https://YOUR_DOMAIN.com/auth/callback",
+  "https://YOUR_DOMAIN.com/auth/shopify/callback",
+  "https://YOUR_DOMAIN.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
+
+
